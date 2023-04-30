@@ -28,31 +28,11 @@ const Login = () => {
                                                 <div className="mb-3 form-check d-flex justify-content-end align-items-center">
                                                     <a className="small" href="#!">Forgot Password?</a>
                                                 </div>
-                                                <div className="d-flex align-items-center justify-content-center">
+                                                <div className="d-flex align-items-center justify-content-evenly">
                                                     <button type="button" className="btn btn-primary login-button">Login</button>
-                                                </div>
-                                            </form>
-
-                                            {/* Social Login */}
-                                            <div className='py-3'>
-                                                <h6><span>or signin using</span></h6>
-                                                <div className='d-flex justify-content-center align-items-center gap-3'>
-                                                    <div>
-                                                        <button type='button' className='btn btn-danger signin'><i className="bi bi-google"></i></button>
-                                                    </div>
-                                                    <div>
-                                                        <button type='button' className='btn btn-primary signin'><i className="bi bi-facebook"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            {/* Signup */}
-                                            <div className='py-3' style={{ display: "flex", flexDirection: "column" }}>
-                                                <h6><span>or signup</span></h6>
-                                                <div className='d-flex justify-content-center align-items-center '>
                                                     <button type="button" className="btn btn-primary">SignUp</button>
                                                 </div>
-
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

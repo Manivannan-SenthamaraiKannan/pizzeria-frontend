@@ -1,0 +1,6 @@
+.brand-image{
+    background-image: url('./Assets//Images/Brand.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
