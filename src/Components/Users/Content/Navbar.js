@@ -25,7 +25,7 @@ const Navbar = () => {
                         <div >
                             <ul className='d-flex justify-content-center align-items-center gap-3' style={{ listStyleType: "none" }}>
                                 <li><i class="bi bi-person"></i> Login</li>
-                                <li><i class="bi bi-bag"></i> Cart</li>
+                                <li><i class="bi bi-bag"></i>Cart</li>
                             </ul>
                         </div>
                     </div>

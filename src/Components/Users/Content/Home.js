@@ -1,11 +1,16 @@
 import React from 'react'
 import Navbar from './Navbar'
+import { useNavigate } from 'react-router-dom'
 import '../../../Assets/Styles/Home.css'
 import Veg from '../../../Assets/Images/Veg.jpg'
 import NonVeg from '../../../Assets/Images/NonVeg.jpg'
 import Dessset from '../../../Assets/Images/Dessset.jpg'
+import Footer from '../../Users/Content/Footer'
 
 const Home = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div>
             <Navbar />
@@ -19,7 +24,7 @@ const Home = () => {
                             <div class="card-body">
                                 <h5 class="card-title">Veg Pizza</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <button type='button' className='btn btn-primary'>Vegetarian</button>
+                                <button type='button' className='btn btn-primary' onClick={()=>navigate('/veg')}>Vegetarian</button>
                             </div>
                         </div>
                     </div>
@@ -29,7 +34,7 @@ const Home = () => {
                             <div class="card-body">
                                 <h5 class="card-title">Non-Veg Pizza</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <button type='button' className='btn btn-primary'>Non-Vegetarian</button>
+                                <button type='button' className='btn btn-primary' onClick={()=>navigate('/nonveg')}>Non-Vegetarian</button>
                             </div>
                         </div>
                     </div>
@@ -45,6 +50,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
