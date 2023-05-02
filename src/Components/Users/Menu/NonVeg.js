@@ -13,7 +13,7 @@ const NonVeg = () => {
   }, [])
 
   const getProducts = () => {
-    axios.get(`${API}/products`).then((res) => {
+    axios.get(`${API}/nonvegpizza`).then((res) => {
       if (res.status === 401) {
         console.log("Data Not Found")
       }
@@ -27,8 +27,8 @@ const NonVeg = () => {
       <h2>Non-Pizza</h2>
       <div className='row' style={{ columnGap: "1.5rem", rowGap: "1.5rem", paddingTop: "2rem" }}>
         {
-          product.map((item) => {
-            return item.veg === false && <ProductCard key={item.id} value={item} />
+          product.map((nvData) => {
+            return <ProductCard key={nvData.id} nvData={nvData} />
           })
         }
       </div>

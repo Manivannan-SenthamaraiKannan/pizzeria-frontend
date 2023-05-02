@@ -1,14 +1,15 @@
 // import React, { useState } from 'react'
 
-const ProductCard = ({ value }) => {
+const ProductCard = (props) => {
+    console.log(props.vData)
 
     // const [select, setSelect] = useState
     return (
         <div class="card" style={{ width: "18rem" }}>
-            <img src={value.img} class="card-img-top" alt="..." />
+            <img src={props.vData.img} class="card-img-top" alt="..." />
             <div class="card-body">
-                <h5 class="card-title">{value.name}</h5>
-                <p class="card-text">{value.description}</p>
+                <h5 class="card-title">{props.vData.name}</h5>
+                <p class="card-text">{props.vData.description}</p>
                 <hr />
                 <div>
                     <p>Price:$</p>

@@ -13,7 +13,7 @@ const Veg = () => {
   }, [])
 
   const getProducts = () => {
-    axios.get(`${API}/products`).then((res) => {
+    axios.get(`${API}/vegpizza`).then((res) => {
       if (res.status === 401) {
         console.log("Data Not Found")
       }
@@ -25,14 +25,26 @@ const Veg = () => {
   return (
     <div className='container py-5'>
       <h2>Veg Pizza</h2>
-      <div className='row' style={{columnGap: "1.5rem", rowGap: "1.5rem",paddingTop:"2rem" }}>
+      <div className='row' style={{ columnGap: "1.5rem", rowGap: "1.5rem", paddingTop: "2rem" }}>
         {
-          product.map((item) => {
-            return item.veg === true && <ProductCard key={item.id} value={item} />
+          product.map((vData) => {
+            return (<div class="card" style = {{ width: "18rem" }}>
+        <img src={vData.img} class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{vData.name}</h5>
+          <p class="card-text">{vData.description}</p>
+          <hr />
+          <div>
+            <p>Price:$</p>
+            <button type="button" className="btn btn-primary">Add to Cart</button>
+          </div>
+          {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+        </div>
+      </div>)
           })
         }
-      </div>
     </div>
+    </div >
 
   )
 }
