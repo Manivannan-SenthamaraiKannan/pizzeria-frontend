@@ -6,6 +6,7 @@ import NonVeg from '../src/Components/Users/Menu/NonVeg'
 import Login from '../src/Components/Admin/Pages/Login.js'
 import SignUP from '../src/Components/Admin/Pages/SignUp.js'
 import ForgotPassword from '../src/Components/Admin/Pages/ForgotPassword.js'
+import Dashboard from '../src/Components/Admin/Content/Dashboard'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUP />} />
           <Route path='/forgotpassword' element={<ForgotPassword />} />
+          <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
       </div>
     </Router>
