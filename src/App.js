@@ -7,6 +7,7 @@ import Login from '../src/Components/Admin/Pages/Login.js'
 import SignUP from '../src/Components/Admin/Pages/SignUp.js'
 import ForgotPassword from '../src/Components/Admin/Pages/ForgotPassword.js'
 import Dashboard from '../src/Components/Admin/Content/Dashboard'
+import Cart from './Components/Cart';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/signup' element={<SignUP />} />
           <Route path='/forgotpassword' element={<ForgotPassword />} />
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
       </div>
     </Router>

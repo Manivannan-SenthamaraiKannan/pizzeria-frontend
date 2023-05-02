@@ -35,7 +35,12 @@ const Veg = () => {
           <p class="card-text">{vData.description}</p>
           <hr />
           <div>
-            <p>Price:$</p>
+            {
+              vData.sizeandcrust.map((obj)=>{
+                return <p>Price:$ {obj.mediumPan[0].price}</p>
+              })
+            }
+            
             <button type="button" className="btn btn-primary">Add to Cart</button>
           </div>
           {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
